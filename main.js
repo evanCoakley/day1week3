@@ -114,6 +114,22 @@ let container = document.getElementById("fields")
       container.appendChild(input)
     }
     else if (formData[i].type ==="select"){
+      let input =document.createElement("select");
+      container.appendChild(input)
+      let defaultOption = document.createElement("option");
+      defaultOption.textContent = formData[i].label;
+      //defaultOption.value= formData[i].value
+
+      input.appendChild(defaultOption);
+      let newOption =
+    }
+    else if (formData[i].type ==="textarea"){
+      let input =document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      container.appendChild(input)
+    }
+    else if (formData[i].type ==="tel"){
       let input =document.createElement("input");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
@@ -124,6 +140,8 @@ let container = document.getElementById("fields")
 
 
 }
+  
+  
 
 
 
