@@ -97,21 +97,36 @@ let formData = [
 
 // -------- Your Code Goes Below this Line --------
 
-function buildForm(){
-let container = document.querySelector("fields") 
+function buildForm() {
+let container = document.getElementById("fields") 
+  
   for(let i = 0; i < formData.length; i++) {
     if (formData[i].type ==="text"){
       let input =document.createElement("input");
       input.type = formData[i].type;
-      input.placeholder = formData[i].labe;
+      input.placeholder = formData[i].label;
       container.appendChild(input)
     }
     else if (formData[i].type ==="email"){
-      let input = document.createElement("input")
+      let input =document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      container.appendChild(input)
+    }
+    else if (formData[i].type ==="select"){
+      let input =document.createElement("input");
+      input.type = formData[i].type;
+      input.placeholder = formData[i].label;
+      container.appendChild(input)
     }
   }
+  
 
 
 }
 
+
+
+
+buildForm()
 
