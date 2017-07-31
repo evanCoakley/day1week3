@@ -113,15 +113,20 @@ let container = document.getElementById("fields")
       input.placeholder = formData[i].label;
       container.appendChild(input)
     }
-    else if (formData[i].type ==="select"){
-      let input =document.createElement("select");
+    else if (formData[i].type === "select") {
+      let input = document.createElement("select");
+      input.placeholder = formData[i].label;
       container.appendChild(input)
-      let defaultOption = document.createElement("option");
-      defaultOption.textContent = formData[i].label;
-      //defaultOption.value= formData[i].value
+        let options = formData[i].options;
+        for (let j = 0; j < options.length; j++){
+          let newOption = document.createElement("option");
+          newOption.textContent = options[j].label;
+          newOption.value = options.value;
+          input.appendChild(newOption);
+        }
 
-      input.appendChild(defaultOption);
-      let newOption =
+
+     
     }
     else if (formData[i].type ==="textarea"){
       let input =document.createElement("input");
