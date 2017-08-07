@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 .wrapper {
   border-radius: 3px;
   border: 2px solid #C1C1C1;
   box-shadow: 0 1px 4px #C1C1C1;
   width: 675px;
   margin: 50px auto;
+  resize: vertical;
+  overflow: auto;
 }
 
 .wrapper .header {
@@ -21,16 +27,18 @@
   padding-left: 20px
 }
 
-.wrapper .fields {
-  padding: 25px;
+
+/* .wrapper .fields {
+  padding: 45px 15px;
+} */
+
+#fields {
+  padding: 45px 15px;
 }
 
-.wrapper .fields input,
-.wrapper .fields textarea,
-.wrapper .fields select
- {
+.wrapper .fields input, .wrapper .fields textarea, .wrapper .fields select {
   padding-left: 15px;
-  width: 500px;
+  width: 620px;
   height: 35px;
   border: 2px solid #CCD1D4;
   border-radius: 3px;
@@ -40,7 +48,6 @@
 
 .wrapper .fields textarea {
   height: 125px;
-  padding: 15px;
 }
 
 .wrapper .footer {

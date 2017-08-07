@@ -98,17 +98,17 @@ let formData = [
 // -------- Your Code Goes Below this Line --------
 
 function buildForm() {
-let container = document.getElementById("fields") 
-  
-  for(let i = 0; i < formData.length; i++) {
-    if (formData[i].type ==="text"){
-      let input =document.createElement("input");
+  let container = document.getElementById("fields")
+
+  for (let i = 0; i < formData.length; i++) {
+    if (formData[i].type === "text") {
+      let input = document.createElement("input");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
       container.appendChild(input)
     }
-    else if (formData[i].type ==="email"){
-      let input =document.createElement("input");
+    else if (formData[i].type === "email") {
+      let input = document.createElement("input");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
       container.appendChild(input)
@@ -117,36 +117,36 @@ let container = document.getElementById("fields")
       let input = document.createElement("select");
       input.placeholder = formData[i].label;
       container.appendChild(input)
-        let options = formData[i].options;
-        for (let j = 0; j < options.length; j++){
-          let newOption = document.createElement("option");
-          newOption.textContent = options[j].label;
-          newOption.value = options.value;
-          input.appendChild(newOption);
-        }
+      let options = formData[i].options;
+      for (let j = 0; j < options.length; j++) {
+        let newOption = document.createElement("option");
+        newOption.textContent = options[j].label;
+        newOption.value = options.value;
+        input.appendChild(newOption);
+      }
 
 
-     
+
     }
-    else if (formData[i].type ==="textarea"){
-      let input =document.createElement("input");
+    else if (formData[i].type === "textarea") {
+      let input = document.createElement("textarea");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
       container.appendChild(input)
     }
-    else if (formData[i].type ==="tel"){
-      let input =document.createElement("input");
+    else if (formData[i].type === "tel") {
+      let input = document.createElement("input");
       input.type = formData[i].type;
       input.placeholder = formData[i].label;
       container.appendChild(input)
     }
   }
-  
+
 
 
 }
-  
-  
+
+
 
 
 
